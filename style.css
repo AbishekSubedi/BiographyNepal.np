@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#head {
+    background-color: hsl(255, 25%, 50%);
+    padding: 1rem;
+    margin: 0 0 0 0;   
+    /* position: fixed; */
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 800;
+    /* position: fixed; */
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body {
+    background-color: aqua;
+}
+#main {
+    margin: 0 10rem 0 10rem;
+    background-color: white;
+    border: 1px;
+}
+img {
+    width: normal;
+    height: normal;
+    border-radius: 50%;
+}
+.image {
+    margin: 0;
+    position: relative;
+}
+.text {
+    text-align: center;
+    word-wrap: break-word;
+}
+h1 {
+    text-align: center;
+}
+#flex {
+    display: flex;
+}
+div {
+    text-align: left;
+    margin: 0 1rem 0 1rem;
+    padding: auto;
+}
