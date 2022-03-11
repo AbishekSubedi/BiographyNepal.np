@@ -1,7 +1,7 @@
 <?php
-    $host = "containers-us-west-5.railway.app:6538";
+    $host = "containers-us-west-29.railway.app:7241";
     $user = "root";
-    $pass = "jXuI47qnzOFRPaj83JGo";
+    $pass = "lXXj6kLXpvDjBdAIvxMp";
     $db = "railway";
 
     $conn = mysqli_connect($host, $user, $pass, $db);
