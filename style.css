@@ -16,7 +16,7 @@
         text-align: center;
     }
     img {
-        width: max-content;
+        width: 100% !important;
         height: 100%;
     }
     .text > p {
@@ -24,6 +24,12 @@
     }
     li {
         font-size: 18px;
+    }
+    .cards-container {
+        grid-template-columns: 1fr !important;
+    }
+    .container1, .container2, .container3 {
+        margin: 5rem 0 !important;
     }
 }
 #main {
@@ -88,4 +94,33 @@ div {
     text-align: left;
     margin: 0 1rem 0 1rem;
     padding: auto;
+    word-wrap: break-word;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+.container1, .container2, .container3 {
+    background: linear-gradient(to left top, blue, red);
+    border-radius: 5%;
+
+}
+.container1 {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+.container2 {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+.container3 {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+}
+.main-container img {
+    border-radius: 50%;
 }
