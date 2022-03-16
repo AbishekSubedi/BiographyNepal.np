@@ -10,7 +10,7 @@
     $name = $_POST['name'];
     $comments = $_POST['comment'];
 
-    $sql = "INSERT INTO tbl_01(Name, Comments)
+    $sql = "INSERT INTO comments_01 (Name, Comments)
             VALUES('$name', '$comments');";
 
     if ($conn -> query($sql)) {
@@ -20,13 +20,14 @@
         echo "Failed.";
     }
      
-    $sql2 = "SELECT *FROM tbl_01 WHERE Comments;";
+    $sql2 = "SELECT *FROM comments_01 WHERE Comments;";
 
     if ($conn -> query($sql2)) {
         while ($row = $data -> fetch_assoc()) {
             echo $row['Comments'] . "<br>";
         }
         header("Location: index.php");
+        header("Location: #comments");
     } else {
         echo "Failed.";
     }

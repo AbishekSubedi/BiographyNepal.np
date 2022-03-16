@@ -89,7 +89,7 @@
         <center>
             <form action="update.php" method="POST">
                 Name: <input type="text" name="name"><br><br>
-                Comments: <input type="text" name="comment"><br><br>
+                Comments: <input type="textarea" name="comment"><br><br>
                 <button type="submit">Send</button>
             </form>
         </center>
