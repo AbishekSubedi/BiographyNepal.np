@@ -93,7 +93,18 @@
                     Comments: <input type='textarea' name='comment'><br><br>
                     <button type='submit'>Send</button>
                 </form>";
-                getComments($conn);
+                $sql = "SELECT *FROM comments_01 WHERE Comments;";
+
+                if ($conn -> query($sql)) {
+                    while ($row = $data -> fetch_assoc()) {
+                        echo $row['Names'] . "<br>";
+                        echo $row['Comments'] . "<br>";
+                    }
+                    header("Location: #comments");
+                } else {
+                    echo "Failed.";
+                }                
+                // getComments($conn);
             ?>
         </center>
     </div>
