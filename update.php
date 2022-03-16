@@ -21,15 +21,15 @@
     }
     
     function getComments($conn) {
-        $sql = "SELECT * FROM comments_01 WHERE Comments;";
+        $sql2 = "SELECT * FROM comments_01 WHERE Comments;";
 
-        if ($conn -> query($sql)) {
+        if ($conn -> query($sql2)) {
             while ($row = $data -> fetch_assoc()) {
                 echo $row['Names'] . "<br>";
                 echo $row['Comments'] . "<br>";
             }
             header("Location: index.php");
-            header("Location: #comments");
+            header("Location: #getcomments");
         } else {
             echo "Failed.";
         }

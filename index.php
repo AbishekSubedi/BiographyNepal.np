@@ -87,14 +87,14 @@ error_reporting(0);
                 <a href="Charles Babbage.html"><img src="Charles1.jpeg" alt="Charles Babbage" width="500px"></a></center>
                 <p><b>Charles Babbage</b>, (born December 26, 1791, London, England—died October 18, 1871, London), English mathematician and inventor...<br>
                 <b>Click to Read More.</b></p> <br>
-            </div>                                                 
+            </div>                                          
     </div>
     <br><br>
     <hr><hr>
-    <div id="comments">
+    <div class="comments">
         <h2>Comments:</h2><br>
         <center> 
-            <form  method="POST" action="update.php">
+            <form action="update.php" method="POST">
                 Name: <input type="text" name="name" placeholder="Enter your name" value="<?php echo $name?>"><br><br>
                 Comments: <textarea name="comment" placeholder="Enter your comment"><?php echo $comments?></textarea><br><br>
                 <button type="submit">Send</button>
@@ -103,7 +103,7 @@ error_reporting(0);
     </div>
     <hr>
     <hr>
-    <div class="getcomments">
+    <div id="getcomments">
         <?php
 
         getComments($conn);
