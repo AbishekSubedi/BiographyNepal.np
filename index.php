@@ -94,7 +94,7 @@ error_reporting(0);
     <div id="comments">
         <h2>Comments:</h2><br>
         <center> 
-            <form  method="POST" action="setComments($conn)">
+            <form  method="POST" action="update.php">
                 Name: <input type="text" name="name" placeholder="Enter your name" value="<?php echo $name?>"><br><br>
                 Comments: <textarea name="comment" placeholder="Enter your comment"><?php echo $comments?></textarea><br><br>
                 <button type="submit">Send</button>
