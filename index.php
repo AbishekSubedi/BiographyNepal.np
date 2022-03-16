@@ -90,7 +90,7 @@
             <form action="update.php" method="POST">
                 Name: <input type="text" name="name"><br><br>
                 Comments: <input type="textarea" name="comment"><br><br>
-                <button type="submit">Send</button>
+                <button type="submit" onclick = "getComments()">Send</button>
             </form>
             getComments();
         </center>
