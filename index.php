@@ -92,6 +92,7 @@
                 Comments: <input type="textarea" name="comment"><br><br>
                 <button type="submit">Send</button>
             </form>
+            getComments();
         </center>
     </div>
     </div>
