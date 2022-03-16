@@ -88,8 +88,7 @@
         <h2>Comments:</h2><br>
         <center>
             <?php
-            echo "
-                <form  method='POST' action='".setComments($conn)."'>
+            echo "<form  method='POST' action='".setComments($conn)."'>
                     Name: <input type='text' name='name'><br><br>
                     Comments: <input type='textarea' name='comment'><br><br>
                     <button type='submit'>Send</button>
