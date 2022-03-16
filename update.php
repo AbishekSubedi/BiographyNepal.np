@@ -7,23 +7,25 @@
 
     $conn = mysqli_connect($host, $user, $pass, $db);
 
-    $name = $_POST['name'];
-    $comments = $_POST['comment'];
+    function setComments($sql) {
+        $name = $_POST['name'];
+        $comments = $_POST['comment'];
 
-    $sql = "INSERT INTO comments_01 (Name, Comments)
-            VALUES('$name', '$comments');";
+        $sql = "INSERT INTO comments_01 (Name, Comments)
+                VALUES('$name', '$comments');";
 
-    if ($conn -> query($sql)) {
-        echo "Data Inserted";
-        header("Location: index.php");
-    } else {
-        echo "Failed.";
+        if ($conn -> query($sql)) {
+            echo "Data Inserted";
+            header("Location: index.php");
+        } else {
+            echo "Failed.";
+        }
     }
     
-    function getComments() {
-        $sql2 = "SELECT *FROM comments_01 WHERE Comments;";
+    function getComments($conn) {
+        $sql = "SELECT *FROM comments_01 WHERE Comments;";
 
-        if ($conn -> query($sql2)) {
+        if ($conn -> query($sql)) {
             while ($row = $data -> fetch_assoc()) {
                 echo $row['Names'] . "<br>";
                 echo $row['Comments'] . "<br>";

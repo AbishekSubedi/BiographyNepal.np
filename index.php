@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,12 +87,15 @@
     <div id="comments">
         <h2>Comments:</h2><br>
         <center>
-            <form action="update.php" method="POST">
-                Name: <input type="text" name="name"><br><br>
-                Comments: <input type="textarea" name="comment"><br><br>
-                <button type="submit" onclick = "getComments()">Send</button>
-            </form>
-            getComments();
+            <?php
+            echo "
+                <form  method='POST' action='".setComments($conn)."'>
+                    Name: <input type='text' name='name'><br><br>
+                    Comments: <input type='textarea' name='comment'><br><br>
+                    <button type='submit'>Send</button>
+                </form>";
+                getComments($conn);
+            ?>
         </center>
     </div>
     </div>
