@@ -1,3 +1,10 @@
+<?php
+
+include 'update.php';
+
+error_reporting(0);
+
+?> 
 <!DOCTYPE html>
 <html lang="en">    
 <head>
@@ -86,27 +93,22 @@
     <hr><hr>
     <div id="comments">
         <h2>Comments:</h2><br>
-        <center>
-            <?php
-            echo "<form  method='POST' action='".setComments($conn)."'>
-                    Name: <input type='text' name='name'><br><br>
-                    Comments: <input type='textarea' name='comment'><br><br>
-                    <button type='submit'>Send</button>
-                </form>";
-                $sql = "SELECT *FROM comments_01 WHERE Comments;";
-
-                if ($conn -> query($sql)) {
-                    while ($row = $data -> fetch_assoc()) {
-                        echo $row['Names'] . "<br>";
-                        echo $row['Comments'] . "<br>";
-                    }
-                    header("Location: #comments");
-                } else {
-                    echo "Failed.";
-                }                
-                // getComments($conn);
-            ?>
+        <center> 
+            <form  method="POST" action="setComments($conn)">
+                Name: <input type="text" name="name" placeholder="Enter your name" value="<?php echo $name?>"><br><br>
+                Comments: <textarea name="comment" placeholder="Enter your comment"><?php echo $comments?></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
         </center>
+    </div>
+    <hr>
+    <hr>
+    <div class="getcomments">
+        <?php
+
+        getComments($conn);
+
+        ?>
     </div>
     </div>
 </body>

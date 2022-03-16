@@ -23,7 +23,7 @@
     }
     
     function getComments($conn) {
-        $sql = "SELECT *FROM comments_01 WHERE Comments;";
+        $sql = "SELECT * FROM comments_01 WHERE Comments;";
 
         if ($conn -> query($sql)) {
             while ($row = $data -> fetch_assoc()) {
