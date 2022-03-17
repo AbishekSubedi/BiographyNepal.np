@@ -1,7 +1,5 @@
 <?php
 
-// include 'update.php';
-
 error_reporting(0);
 
 ?>
@@ -19,9 +17,9 @@ error_reporting(0);
         <header>
             <div id="sub_head">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>About</li>
-                    <li>Search</li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><button onclick="display()">About</button></li>
+                    <li><button onclick="show()">Search</button></li>
                     <li>Contact</li>
                 </ul>
             </div>
@@ -53,8 +51,8 @@ error_reporting(0);
                 <b>Click to Read More.</b></p>
             </div>
             <div class="container1">
-                <center><h3>4. Abraham Lincoln</h3>
-                <a href="Abraham Lincoln.html"><img src="Abraham1.jpeg" alt="Abraham Lincoln"></a></center>
+                <center><h3>4. Cristiano Ronaldo</h3>
+                <a href="Cristiano Ronaldo.html"><img src="Cristiano3.jpeg" alt="Cristiano Ronaldo"></a></center>
                 <p><b>Abraham Lincoln</b>, byname <b>Honest Abe, the Rail-Splitter</b>, or <b>the Great Emancipator</b>, (born February 12, 1809... <br> 
                 <b>Click on Image to Read More.</b></p>
             </div>
@@ -65,29 +63,29 @@ error_reporting(0);
                 <b>Click to Read More.</b></p>
             </div>
             <div class="container3">
-                <center><h3>6. Charles Babbage</h3>
-                <a href="Charles Babbage.html"><img src="Charles1.jpeg" alt="Charles Babbage" width="500px"></a></center>
-                <p><b>Charles Babbage</b>, (born December 26, 1791, London, England—died October 18, 1871, London), English mathematician and inventor...<br>
-                <b>Click to Read More.</b></p>
+                <center><h3>6. Lionel Messi</h3>
+                <a href="Lionel Messi.html"><img src="Lionel3.jpeg" alt="Lionel Messi" width="500px"></a></center>
+                <b>Lionel Messi</b>, in full <b>Lionel Andrés Messi</b>, also called <b>Leo Messi</b>, (born June 24, 1987, Rosario, Argentina), Argentine-born football (soccer) player who was named Fédération Internationale de Football Association (FIFA) world player of the year six times (2009–12, 2015, and 2019)...<br>
+                <b>Click on image to Read More.</b></p>
             </div>
             <div class="container1">
-                <center><h3>7. Abraham Lincoln</h3>
-                <a href="Abraham Lincoln.html"><img src="Abraham1.jpeg" alt="Abraham Lincoln"></a></center>
-                <p><b>Abraham Lincoln</b>, byname <b>Honest Abe, the Rail-Splitter</b>, or <b>the Great Emancipator</b>, (born February 12, 1809... <br> 
-                <b>Click on Image to Read More.</b></p>
+                <center><h3>7. Marie Curie</h3>
+                <a href="Marie Curie.html"><img src="Marie3.jpeg" alt="Marie Curie"></a></center>
+                <p><b>Marie Curie</b>, née <b>Maria Sklodowska</b>, was born in Warsaw on November 7, 1867, the daughter of a secondary-school teacher. She received a general education in local schools and some scientific training from her father. She became involved in a students’... <br> 
+                <b>Click on image to Read More.</b></p>
             </div>
             <div class="container2">
-                <center><h3>8. Albert Einstein</h3>
-                <a href="Albert Einstein.html"><img src="Albert1.jpeg" alt="Albert Einstein" width="500px"></a></center>
-                <p><b>Albert Einstein</b>, (born March 14, 1879, Ulm, Württemberg, Germany—died April 18, 1955, Princeton, New Jersey, U.S.), German-born physicist...<br>
-                <b>Click to Read More.</b></p>
+                <center><h3>8. Nikola Tesla</h3>
+                <a href="Nikola Tesla.html"><img src="Nikola1.jpeg" alt="Nikola Tesla" width="500px"></a></center>
+                <p><b>Nikola Tesla</b>, (born July 9/10, 1856, Smiljan, Austrian Empire [now in Croatia]—died January 7, 1943, New York, New York, U.S.), Serbian American inventor and engineer who discovered and patented...<br>
+                <b>Click on image to Read More.</b></p>
             </div>
             <div class="container3">
-                <center><h3>9. Charles Babbage</h3>
-                <a href="Charles Babbage.html"><img src="Charles1.jpeg" alt="Charles Babbage" width="500px"></a></center>
-                <p><b>Charles Babbage</b>, (born December 26, 1791, London, England—died October 18, 1871, London), English mathematician and inventor...<br>
-                <b>Click to Read More.</b></p> <br>
-            </div>                                          
+                <center><h3>9. Stephen Hawking</h3>
+                <a href="Stephen Hawking.html"><img src="Stephen3.jpeg" alt="Charles Babbage" width="500px"></a></center>
+                <p><b>Stephen Hawking</b>, in full <b>Stephen William Hawking</b>, (born January 8, 1942, Oxford, Oxfordshire, England—died March 14, 2018, Cambridge, Cambridgeshire)...<br>
+                <b>Click on image to Read More.</b></p> <br>
+            </div>                                        
     </div>
     <br><br>
     <hr><hr>
@@ -95,19 +93,16 @@ error_reporting(0);
         <h2>Comments:</h2><br>
         <center> 
             <form action="update.php" method="POST">
-                Name: <input type="text" name="name" placeholder="Enter your name" value="<?php echo $name;?>"><br><br>
-                Comments: <textarea name="comment" placeholder="Enter your comment"><?php echo $comments;?></textarea><br><br>
-                <button type="submit">Send</button>
+                Name: <input type="text" name="name" placeholder="Enter your name" value="<?php echo $name;?>" required><br><br>
+                Comments: <textarea name="comment" placeholder="Enter your comment" required><?php echo $comments;?></textarea><br><br>
+                <button type="submit" onclick="comments()">Send</button>
             </form>
         </center>
     </div>
     <hr><hr>
     <div id="getcomments">
-        <?php
-
-        getComments($conn);
-
-        ?>
+        <h4><?php echo $row['Names'] . "<br>"; ?></h4>
+        <p><?php echo $row['Comments'] . "<br>"; ?></p>
     </div>
     </div>
 </body>

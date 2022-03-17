@@ -18,6 +18,7 @@
     img {
         width: 100% !important;
         height: 100%;
+        border-radius: 20px;
     }
     .text > p {
         text-align: left;
@@ -75,6 +76,7 @@ body {
 }
 img {
     width: 60%;
+    border-radius: 20px;
 }
 .image {
     margin: 0;
@@ -126,4 +128,14 @@ div {
 }
 .comments {
     padding: 2rem;
+}
+button {
+    text-decoration: none;
+    background-color: hsl(255, 25%, 50%);
+    color: black;
+    font-size: 25px;
+    font-weight: 800;
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
 }

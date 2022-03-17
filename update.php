@@ -28,7 +28,7 @@
                 echo $row['Names'] . "<br>";
                 echo $row['Comments'] . "<br>";
             }
-            // header("Location: index.php");
+            header("Location: index.php");
             header("Location: #getcomments");
         } else {
             echo "Failed.";
