@@ -1,6 +1,6 @@
 <?php
 
-include 'update.php';
+// include 'update.php';
 
 error_reporting(0);
 
@@ -95,14 +95,13 @@ error_reporting(0);
         <h2>Comments:</h2><br>
         <center> 
             <form action="update.php" method="POST">
-                Name: <input type="text" name="name" placeholder="Enter your name" value="<?php echo $name?>"><br><br>
-                Comments: <textarea name="comment" placeholder="Enter your comment"><?php echo $comments?></textarea><br><br>
+                Name: <input type="text" name="name" placeholder="Enter your name" value="<?php echo $name;?>"><br><br>
+                Comments: <textarea name="comment" placeholder="Enter your comment"><?php echo $comments;?></textarea><br><br>
                 <button type="submit">Send</button>
             </form>
         </center>
     </div>
-    <hr>
-    <hr>
+    <hr><hr>
     <div id="getcomments">
         <?php
 
