@@ -153,16 +153,14 @@ $data = $conn->query($sql);
                         <b>Click on image to Read More.</b>
                     </p> <br>
                 </div>
-            </div>
-            <br><br>
+            </div><br>
             <hr>
             <hr>
             <div class="comments">
-                <h2>Comments:</h2><br>
                 <center>
                     <form action="update.php" method="POST">
-                        Name: <input class="form-control" type="text" name="name" placeholder="Enter your name" value="<?php echo $name; ?>" required><br><br>
-                        Comments: <textarea class="form-control" name="comment" placeholder="Enter your comment" required><?php echo $comments; ?></textarea><br><br>
+                        Name: <input class="form-control" type="text" name="name" placeholder="Enter your name" value="<?php echo $name; ?>" required><br>
+                        Comments: <textarea class="form-control" name="comment" placeholder="Enter your comment" required><?php echo $comments; ?></textarea><br>
                         <button class="btn_form" type="submit" onclick="comments()">Send</button>
                     </form>
                 </center>
@@ -174,8 +172,8 @@ $data = $conn->query($sql);
                 if ($data) {
                     while ($row = $data->fetch_assoc()) {
                 ?>
-                        <div style="border: 2px solid gray; border-radius: 5px; padding: 10px;">
-                            <strong><?php echo $row['Name']; ?></strong> <span style="color: #ddff00;"> commented</span>
+                        <div class="comm" style="border: 2px solid gray; border-radius: 5px; padding: 10px;">
+                            <strong><?php echo $row['Name']; ?></strong> <span style="color: #ddff00;"> commented</span><br>
                             <?php echo $row['Comments']; ?>
                             <p><?php echo time_elapsed_string($row['CreatedAt'], true) ?></p>
                         </div>

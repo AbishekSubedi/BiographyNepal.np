@@ -133,8 +133,19 @@ div {
 .main-container img {
   border-radius: 50%;
 }
-.comments {
+.comments,
+.comm {
   padding: 2rem;
+  margin: 10px 0;
+  transition: 0.3s;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+}
+.comm {
+  margin: 20px 0;
+}
+#getcomments {
+  margin: 20px 0;
 }
 .btn_head {
   text-decoration: none;
@@ -159,7 +170,6 @@ div {
   transition: 0.3s;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
 }
-
 .form-control {
   padding: 8px 10px;
   display: block;
