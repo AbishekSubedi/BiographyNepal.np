@@ -5,10 +5,3 @@
     $db = "railway";
 
     $conn = mysqli_connect($host, $user, $pass, $db);
-
-    if ($conn) {
-        echo "Connected";
-    } else {
-        echo "Connection Error";
-    }
-?>    
