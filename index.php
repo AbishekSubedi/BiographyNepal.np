@@ -188,7 +188,7 @@ $data = $conn->query($sql);
                     while ($row = $data->fetch_assoc()) {
                 ?>
                         <div class="comm" style="border: 2px solid gray; border-radius: 5px; padding: 10px;">
-                            <strong><?php echo $row['Name']; ?></strong> <span style="color: #ddff00;"> commented</span><br>
+                            <strong><?php echo $row['Name']; ?></strong> <span style="color: #8b0000;"> commented</span><br>
                             <?php echo $row['Comments']; ?>
                             <p><?php echo time_elapsed_string($row['CreatedAt'], true) ?></p>
                         </div>
