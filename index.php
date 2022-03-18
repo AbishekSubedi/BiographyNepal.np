@@ -2,21 +2,6 @@
 require './db.php';
 error_reporting(0);
 
-// function getComments($conn) {
-//     $sql2 = "SELECT * FROM comments_01 WHERE Comments;";
-
-//     if ($conn -> query($sql2)) {
-//         while ($row = $data -> fetch_assoc()) {
-//             echo $row['Names'] . "<br>";
-//             echo $row['Comments'] . "<br>";
-//         }
-//         header("Location: index.php");
-//         header("Location: #getcomments");
-//     } else {
-//         echo "Failed.";
-//     }
-// }
-
 function time_elapsed_string($datetime, $full = false)
 {
     $now = new DateTime;
