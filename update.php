@@ -11,7 +11,7 @@ $name = $_POST['name'];
 $comments = $_POST['comment'];
 
 $sql = "INSERT INTO comments_01 (Name, Comments)
-            VALUES('$name', '$comments');";
+        VALUES('$name', '$comments');";
 
 if ($conn->query($sql)) {
     echo "Data Inserted";
